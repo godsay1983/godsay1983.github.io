@@ -1,0 +1,14 @@
+---
+layout: default
+title: 文章列表
+---
+<h2>📋 全部文章</h2>
+<p style="color: var(--text-muted); margin-bottom: 1.5rem;">共 {{ site.posts | size }} 篇文章</p>
+<ul class="post-list">
+{% for post in site.posts %}
+  <li>
+    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>

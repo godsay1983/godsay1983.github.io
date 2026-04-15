@@ -7,7 +7,9 @@ categories: [AI, 技术]
 
 ## 前言
 
-最近在玩 AI Agent，发现两个很有意思的平台：**OpenClaw** 和 **Hermes**。两者都支持 Skill/插件扩展，都走开源路线，但设计哲学和目标用户差异挺大。今天来深度对比一下，顺便也记录我折腾博客的过程。
+最近在玩 AI Agent，发现两个很有意思的平台：**OpenClaw** 和 **Hermes**。两者都支持 Skill/插件扩展，都走开源路线，但定位差异很大。今天来深度对比一下，顺便也记录我折腾博客的过程。
+
+> ⚠️ **特别说明：** 本文中提到的 "Hermes" 是我本地运行的 AI Agent 助手（基于 Hermes Agent 开源项目），并非那个搞加密货币的 Hermes代币，两者没有任何关系。
 
 ---
 
@@ -18,106 +20,115 @@ categories: [AI, 技术]
 | 项目 | 信息 |
 |------|------|
 | 创始人 | Peter Steinberger（PSPDFKit 创始人） |
-| 官网 | [clawhub.ai](https://clawhub.ai) |
-| 源码 | GitHub openclaw/clawhub (MIT) |
-| 定位 | 通用 AI Agent CLI + 技能市场 |
+| 官网 | [openclaw.ai](https://openclaw.ai) |
+| GitHub | [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)（10万+ ⭐） |
+| 安装命令 | `curl -fsSL https://openclaw.ai/install.sh \| bash` |
+| 定位 | 开放 AI Agent 平台，运行在本地机器上 |
 
-核心是一个 CLI 工具 + ClawHub 技能市场。安装技能只需一句命令：
+核心是一个 Agent 平台，自带 **gateway 系统**，支持从你已有的聊天软件直接控制 AI——WhatsApp、Telegram、Discord、Slack、Teams 等都可以。数据在自己机器上，完全开源。
 
-```bash
-npx clawhub@latest install <skill-slug>
-```
+---
 
-### Hermes
+### Hermes（我正在用的）
 
 | 项目 | 信息 |
 |------|------|
-| 官网 | 侧重本地部署 |
-| 源码 | GitHub hermes-agent (开源) |
-| 定位 | 本地优先，消息平台集成 |
+| 官网 | 本地部署为主 |
+| 源码 | GitHub hermes-agent（开源） |
+| 定位 | 本地优先的 CLI Agent，支持多消息平台 gateway |
 
-以本地 CLI 为核心，支持飞书、Telegram、QQ 等消息平台 gateway，偏向有本地部署需求的用户。
+以本地 CLI 为核心，支持飞书、Telegram、QQ、Discord、WhatsApp 等多种消息平台的 gateway 接入。我现在就是通过飞书和曹总对话的，背后就是 Hermes Agent 在驱动。
 
 ---
 
 ## 二、核心功能对比
 
-### 1. Skill 系统
+### 1. 消息平台集成
 
-**OpenClaw：** 采用 ClawHub 作为技能中心，类 npm 模式
-- 版本化管理，支持 rollback
-- 一键安装：`clawhub install <slug>`
+**OpenClaw：** 自带 channel 系统
+- 支持 WhatsApp、Telegram、Discord、Slack、Teams
+- 还支持 Twitch 和 Google Chat（新版新增）
+- 你的 AI 助手跟着你到你用的聊天软件里
+- Web Chat 功能：像发图片一样发消息给 AI
+
+**Hermes：** 自带 gateway 平台适配器
+- 支持飞书、Telegram、Discord、WhatsApp、Slack、Signal
+- 还支持 QQ（通过 qqbot）
+- 支持 HomeAssistant 智能家居
+- 通过 WebSocket 远程接入，本地和远程都可以
+
+**对比：** 两者都支持多消息平台，OpenClaw 多了 Twitch/Google Chat，Hermes 多了 QQ 和 HomeAssistant。
+
+---
+
+### 2. Skill/插件系统
+
+**OpenClaw：** ClawHub 技能市场
+- 类 npm 模式，版本化管理，支持 rollback
+- 一键安装：`npx clawhub@latest install <skill-slug>`
 - 搜索方便：`clawhub search <keyword>`
+- 支持 MCP（Model Context Protocol）
+- 技能安全扫描：与 VirusTotal 合作
 
 **Hermes：** 本地 skill 目录
 - Skills 保存在 `~/.hermes/skills/`
 - 支持 skill 嵌套（子目录）
-- 可以从 OpenClaw 导入（我已经在用）
+- 也可以从 OpenClaw 导入技能（我就在这么用）
+- 内置 MCP 工具支持
 
-**对比：** OpenClaw 的生态更完善，发布和分享 skill 更容易；Hermes 更像本地工具箱。
-
----
-
-### 2. 消息平台集成
-
-**OpenClaw：** 目前主要通过 Telegram Bot 等第三方集成
-- 不自带 gateway
-- 需要自己对接
-
-**Hermes：** 自带 gateway 系统
-- 飞书、Telegram、Discord、WhatsApp 等开箱即用
-- 支持远程连接（WS gateway）
-- 我现在就是通过飞书和曹总对话的
-
-**对比：** Hermes 在消息平台集成上更成熟，OpenClaw 更轻量。
+**对比：** OpenClaw 的技能生态更完善，发布和分享更容易；Hermes 更偏向本地工具箱，但可以导入 OpenClaw 技能。
 
 ---
 
-### 3. MCP 支持
+### 3. 本地执行能力
 
-**OpenClaw：** 原生支持 MCP (Model Context Protocol)
-- `openclaw-mcp` 系列工具完善
-- 可以连接各种 MCP 服务器
+**OpenClaw：** 
+- 运行在你自己的机器上（笔记本、 homelab 或 VPS）
+- 你的基础设施、你的密钥、你的数据
+- 可以执行代码、操作文件
 
-**Hermes：** 也有 MCP 工具支持
-- 内置 `mcp` toolset
-- 可配置 MCP 服务器
+**Hermes：**
+- 本地 CLI 模式直接执行
+- 支持子 Agent 委托（Claude Code、Codex、OpenCode）
+- Cron 定时任务支持
+- Terminal 工具内置
 
-**对比：** 两者都有 MCP 支持，OpenClaw 的 MCP 生态更丰富。
+**对比：** OpenClaw 强调"AI 有自己的机器"，操作范围更广；Hermes 偏向任务规划和委托，更像一个指挥中心。
 
 ---
 
-### 4. CLI 体验
+### 4. 安全与隐私
+
+**OpenClaw：**
+- 数据在用户自己机器上，不在 SaaS 服务器
+- 34 个安全相关 commit
+- 与 VirusTotal 合作扫描技能安全
+- 开源可审计
+
+**Hermes：**
+- 本地优先，数据完全自主
+- 支持配置自定义模型提供商
+- 支持 MCP 安全连接
+
+**对比：** 两者都强调本地数据控制，OpenClaw 在安全社区建设上投入更多。
+
+---
+
+### 5. 安装体验
 
 **OpenClaw：**
 ```bash
-clawhub install xxx      # 安装技能
-clawhub explore          # 浏览技能
-clawhub inspect <slug>   # 查看技能详情
+curl -fsSL https://openclaw.ai/install.sh | bash
 ```
-界面现代化，文档清晰。
+一条命令安装完成，门槛极低。
 
 **Hermes：**
 ```bash
-hermes               # 交互式 CLI
-hermes skills        # 管理技能
-hermes tools         # 管理工具
+# 需要手动安装依赖和配置
+pip install hermes-agent
+hermes setup
 ```
-功能丰富，但复杂度更高。
-
----
-
-### 5. 部署方式
-
-**OpenClaw：** 纯本地 CLI
-- 下载即用
-- 无需服务器
-
-**Hermes：** 支持多种模式
-- 本地 CLI
-- Gateway 服务（可后台运行）
-- 支持定时任务（Cron）
-- 远程消息接入
+更适合开发者用户。
 
 ---
 
@@ -126,33 +137,35 @@ hermes tools         # 管理工具
 ### OpenClaw 优缺点
 
 **✅ 优点：**
-- 技能生态完善，ClawHub 社区活跃
-- 安装体验极佳（一句命令）
-- 版本化管理，支持 rollback
-- 创始人有成熟产品背景，质量有保证
+- 安装极简，一条命令搞定
+- 消息平台集成丰富（10+ 平台）
+- GitHub 10万+ stars，社区活跃
+- 技能市场生态成熟，ClawHub 扫码安全
+- 创始人有成熟产品背景（PSPDFKit）
 - 开源透明
 
 **❌ 缺点：**
 - 主要面向海外用户，中文资料少
-- 需要自己部署消息平台
-- 无内置 gateway
+- 偏向"聊天软件里的 AI"，本地工具属性弱
+- 国内用户使用 Telegram/Discord 等有一定门槛
 
 ---
 
 ### Hermes 优缺点
 
 **✅ 优点：**
-- 消息平台集成完善（飞书、QQ 等国内平台）
-- 支持远程 gateway
-- 内置定时任务
-- 本地优先，数据在自己手上
-- 支持多消息平台同时接入
+- 飞书、QQ 等国内平台原生支持
+- 支持远程 gateway，部署灵活
+- 内置 Cron 定时任务
+- 支持子 Agent 委托（Codex/Claude Code）
+- 完全本地，数据 100% 自主
+- 我现在就在用的就是这个
 
 **❌ 缺点：**
-- Skill 生态不如 OpenClaw 成熟
-- 安装新 Skill 需要手动导入
-- 文档偏向开发者
-- 配置相对复杂
+- 安装配置相对复杂
+- 技能生态不如 OpenClaw 成熟
+- 主要面向开发者用户
+- 国内社区资源少
 
 ---
 
@@ -160,22 +173,28 @@ hermes tools         # 管理工具
 
 | 场景 | 推荐 |
 |------|------|
-| 纯 CLI 使用，追求技能生态 | **OpenClaw** |
-| 需要接飞书/Telegram/QQ | **Hermes** |
-| 想建自己的 AI 对话服务 | **Hermes** |
-| 快速安装分享 Skill | **OpenClaw** |
-| 国内用户，不想折腾 | **Hermes** |
+| 安装简单，开箱即用 | **OpenClaw** |
+| 接入飞书/QQ 作为日常助手 | **Hermes** |
+| 追求技能生态，快速获取插件 | **OpenClaw** |
+| 本地开发，向导子 Agent 干活 | **Hermes** |
+| 海外用户，多平台聊天集成 | **OpenClaw** |
+| 国内用户，已有飞书/Telegram | **Hermes** |
 
 ---
 
-## 五、写在最后
+## 五、两个都用可以吗？
 
-两个平台其实不冲突。OpenClaw 适合作为技能中心，Hermes 适合作为日常使用的 Agent。我现在把 OpenClaw 的技能导入到 Hermes 里用，两者结合效果不错。
+完全可以。
 
-如果你对某个平台感兴趣，可以去他们的 GitHub 看看源码，链接在上面。
+我现在的方案就是：**OpenClaw + Hermes 一起用**。
+
+- **OpenClaw** 负责技能生态——需要什么技能从 ClawHub 拉
+- **Hermes** 负责日常对话——飞书发消息，24小时在线
+
+两个都是开源项目，数据都在自己手上，用起来很安心。
 
 ---
 
 *这篇文章全程在飞书里口述，由辉仆整理发布。博客地址：[godsay1983.github.io](https://godsay1983.github.io)*
 
-> 🔥 *这就是 AI Agent 的魅力——工具在进化，我们也在进化。*
+> 🦞 *OpenClaw 的吉祥物是龙虾，Peter 说"有些东西是神圣的"。我觉得，工具也是这样——好用的工具，值得一直用下去。*

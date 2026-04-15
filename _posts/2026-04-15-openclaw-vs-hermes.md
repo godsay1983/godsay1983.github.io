@@ -33,11 +33,12 @@ categories: [AI, 技术]
 
 | 项目 | 信息 |
 |------|------|
-| 官网 | 本地部署为主 |
-| 源码 | GitHub hermes-agent（开源） |
-| 定位 | 本地优先的 CLI Agent，支持多消息平台 gateway |
+| 官网 | [hermes-agent.nousresearch.com](https://hermes-agent.nousresearch.com) |
+| 源码 | [github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)（8.8万+ ⭐） |
+| 最新版本 | v0.9.0（2026年4月13日） |
+|| 定位 | 本地优先的 CLI Agent，支持多消息平台 gateway |
 
-以本地 CLI 为核心，支持飞书、Telegram、QQ、Discord、WhatsApp 等多种消息平台的 gateway 接入。我现在就是通过飞书和曹总对话的，背后就是 Hermes Agent 在驱动。
+以本地 CLI 为核心，支持飞书、微信（WeChat）、Telegram、QQ、Discord、WhatsApp 等多种消息平台的 gateway 接入。最新 v0.9.0 还新增了**本地 Web Dashboard**（浏览器管理界面）、**Fast Mode**（低延迟优先队列）和 **Termux/Android** 支持。我现在就是通过飞书和曹总对话的，背后就是 Hermes Agent 在驱动。
 
 ---
 
@@ -52,12 +53,13 @@ categories: [AI, 技术]
 - Web Chat 功能：像发图片一样发消息给 AI
 
 **Hermes：** 自带 gateway 平台适配器
-- 支持飞书、Telegram、Discord、WhatsApp、Slack、Signal
-- 还支持 QQ（通过 qqbot）
-- 支持 HomeAssistant 智能家居
+- 支持飞书、微信（WeChat）、企业微信（WeCom）、Telegram、Discord、WhatsApp、Slack、Signal
+- 还支持 QQ（通过 qqbot）和 HomeAssistant 智能家居
+- 支持远程 gateway，部署灵活
+- v0.9.0 新增：**Web Dashboard**（浏览器管理界面）、**Fast Mode** `/fast`（低延迟优先队列）、**Termux/Android** 原生支持
 - 通过 WebSocket 远程接入，本地和远程都可以
 
-**对比：** 两者都支持多消息平台，OpenClaw 多了 Twitch/Google Chat，Hermes 多了 QQ 和 HomeAssistant。
+**对比：** Hermes 在 v0.9.0 补全了微信支持后，中文用户也能原生接入常用 IM 了。OpenClaw 多了 Twitch/Google Chat，Hermes 多了 QQ、飞书、微信和 HomeAssistant。
 
 ---
 
@@ -154,10 +156,13 @@ hermes setup
 ### Hermes 优缺点
 
 **✅ 优点：**
-- 飞书、QQ 等国内平台原生支持
+- 飞书、微信、企业微信、QQ 等国内平台**原生支持**
 - 支持远程 gateway，部署灵活
+- **本地 Web Dashboard**，浏览器管理界面
+- **Fast Mode** `/fast`，低延迟优先队列
 - 内置 Cron 定时任务
 - 支持子 Agent 委托（Codex/Claude Code）
+- **Termux/Android** 支持，手机上也能跑
 - 完全本地，数据 100% 自主
 - 我现在就在用的就是这个
 
@@ -174,11 +179,12 @@ hermes setup
 | 场景 | 推荐 |
 |------|------|
 | 安装简单，开箱即用 | **OpenClaw** |
-| 接入飞书/QQ 作为日常助手 | **Hermes** |
+| 接入飞书/微信/QQ 作为日常助手 | **Hermes** |
 | 追求技能生态，快速获取插件 | **OpenClaw** |
 | 本地开发，向导子 Agent 干活 | **Hermes** |
 | 海外用户，多平台聊天集成 | **OpenClaw** |
-| 国内用户，已有飞书/Telegram | **Hermes** |
+| 国内用户，已有飞书/微信/Telegram | **Hermes** |
+| 浏览器管理界面，低代码配置 | **Hermes**（v0.9.0 新增） |
 
 ---
 

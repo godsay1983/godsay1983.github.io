@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article>
+  <header style="margin-bottom: 2rem;">
+    <h1 style="border:none; font-size: 2rem; margin-bottom: 0.5rem;">{{ page.title }}</h1>
+    <p style="color: var(--text-muted);">
+      {{ page.date | date: "%Y-%m-%d" }}
+      {% if page.categories %}
+      &nbsp;|&nbsp; 分类：
+      {% for cat in page.categories %}
+        <span>{{ cat }}</span>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+      {% endif %}
+    </p>
+  </header>
+
+  {{ content }}
+
+  <hr>
+  <p style="margin-top: 2rem;">
+    <a href="/">← 返回首页</a>
+  </p>
+</article>

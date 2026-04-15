@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<h2>欢迎 👋</h2>
+
+<p>这是一个用 Jekyll 和 GitHub Pages 创建的个人博客。</p>
+
+<p>在这里我会分享：</p>
+<ul>
+  <li>📝 技术笔记</li>
+  <li>💡 思考和想法</li>
+  <li>🌟 其他有趣的内容</li>
+</ul>
+
+<h2>最新文章</h2>
+
+<ul class="post-list">
+{% for post in site.posts limit:10 %}
+  <li>
+    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>

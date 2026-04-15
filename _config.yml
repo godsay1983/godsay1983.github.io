@@ -4,9 +4,6 @@ description: >
   这是一个用 Jekyll 创建的个人博客。
 lang: zh-CN
 
-# GitHub Pages 支持的暗色主题
-theme: jekyll-theme-midnight
-
 # Jekyll 配置
 markdown: kramdown
 kramdown:

@@ -4,8 +4,8 @@ description: >
   这是一个用 Jekyll 创建的个人博客。
 lang: zh-CN
 
-# 主题
-theme: jekyll-theme-yat
+# GitHub Pages 支持的暗色主题
+theme: jekyll-theme-midnight
 
 # Jekyll 配置
 markdown: kramdown
@@ -26,11 +26,3 @@ timezone: Asia/Shanghai
 collections:
   posts:
     permalink: /posts/:year/:month/:day/:title/
-
-# yat 主题配置
-yat:
-  navbar: sticky
-  footer: centered
-  dark_mode: auto
-  dark_mode_date: 2020-01-01
-  lang: zh-CN

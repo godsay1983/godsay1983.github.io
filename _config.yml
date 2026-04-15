@@ -1,0 +1,29 @@
+title: 辉仆的博客
+author: 曹总
+email: caozp@qq.com
+description: >-
+  这是一个用 Jekyll 创建的个人博客。
+lang: zh-CN
+
+# GitHub Pages 默认主题
+theme: minima
+
+# Jekyll 配置
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# 文章目录
+future: true
+show_drafts: false
+limit_posts: 10
+highlighter: rouge
+
+# 时区
+timezone: Asia/Shanghai
+
+# Build settings
+collections:
+  posts:
+    permalink: /posts/:year/:month/:day/:title/

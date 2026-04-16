@@ -1,4 +1,6 @@
 variables:
+  GEM_HOME: /home/gitlab-runner/.gem/ruby/3.2.0
+  GEM_PATH: /home/gitlab-runner/.gem/ruby/3.2.0
   JEKYLL_ENV: production
 
 pages:

@@ -4,15 +4,19 @@ variables:
   JEKYLL_ENV: production
 
 before_script:
-  - gem install jekyll jekyll-feed jekyll-theme-chirpy bundler
-  - bundle install
+  - apt-get update -qq && apt-get install -y docker.io -qq > /dev/null
 
 pages:
   stage: deploy
   script:
-    - bundle exec jekyll build -d public
+    - gem install jekyll jekyll-feed jekyll-theme-chirpy bundler --quiet
+    - bundle install
+    - bundle exec jekyll build
+    # 启动临时容器，把构建结果复制到 /data/blog（nginx 挂载的目录）
+    - docker run --rm -v /data/blog:/data/blog alpine sh -c "rm -rf /data/blog/* && cp -r _site/. /data/blog/"
+    - echo "部署成功！博客地址: http://192.168.109.202:4000"
   artifacts:
     paths:
-      - public
+      - _site
   rules:
     - if: $CI_COMMIT_BRANCH == "main"

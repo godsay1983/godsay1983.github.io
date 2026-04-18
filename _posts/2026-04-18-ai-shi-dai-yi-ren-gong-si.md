@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI时代的"一人公司"：一个人，凭什么撬动一家公司？"
+title: "AI时代的一人公司：一个人，凭什么撬动一家公司？"
 date: 2026-04-18 15:00:00 +0800
 categories: [随想]
 tags: [AI, 一人公司, 创业, Solopreneur, OPC]

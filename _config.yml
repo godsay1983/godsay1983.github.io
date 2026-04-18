@@ -34,3 +34,4 @@ collections:
 github:
   client_id: "REMOVED_CLIENT_ID"
   client_secret: "REMOVED_CLIENT_SECRET"
+  repository: "godsay1983/godsay1983.github.io"

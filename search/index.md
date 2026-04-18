@@ -27,7 +27,6 @@ permalink: /search/
 .search-result .date { color: var(--text-muted); font-size: 0.9rem; margin-left: 0.5rem; }
 .search-result .excerpt { color: var(--text-muted); margin-top: 0.3rem; font-size: 0.95rem; }
 .no-results { color: var(--text-muted); padding: 2rem; text-align: center; }
-mark { background: #4a3f00; color: #ffd700; padding: 0 2px; border-radius: 2px; }
 </style>
 
 <h2>🔍 文章搜索</h2>
@@ -77,19 +76,6 @@ var fuse = new Fuse(searchData, {
   minMatchCharLength: 1
 });
 
-function highlight(text, indices) {
-  if (!indices || !indices.length) return text;
-  var result = '';
-  var lastIndex = 0;
-  indices.forEach(function(pair) {
-    result += text.substring(lastIndex, pair[0]);
-    result += '<mark>' + text.substring(pair[0], pair[1] + 1) + '</mark>';
-    lastIndex = pair[1] + 1;
-  });
-  result += text.substring(lastIndex);
-  return result;
-}
-
 function renderResults(results) {
   var html = '';
   if (results.length === 0) {
@@ -97,9 +83,8 @@ function renderResults(results) {
   } else {
     results.forEach(function(r) {
       var d = r.item;
-      var titleHighlighted = highlight(d.title, r.matches && r.matches.find(function(m){ return m.key==='title'; }) ? r.matches.find(function(m){ return m.key==='title'; }).indices[0] : null);
       html += '<div class="search-result">';
-      html += '<div><a href="' + d.url + '">' + titleHighlighted + '</a> <span class="date">' + d.date + '</span></div>';
+      html += '<div><a href="' + d.url + '">' + d.title + '</a> <span class="date">' + d.date + '</span></div>';
       if (d.excerpt) html += '<div class="excerpt">' + d.excerpt.substring(0, 120) + (d.excerpt.length > 120 ? '...' : '') + '</div>';
       html += '</div>';
     });

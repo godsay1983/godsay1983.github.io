@@ -3,7 +3,7 @@ layout: post
 title: "Claude 编程太贵了？2026年主流编程辅助方案全面对比"
 date: 2026-04-18 12:00:00 +0800
 categories: [编程, AI, 技术]
-tags: [Claude, Copilot, Cursor, Windsurf, Kimi, DeepSeek, 编程辅助, AI编程]
+tags: [Claude, Copilot, Cursor, Windsurf, Kimi, DeepSeek, Codex, 编程辅助, AI编程]
 author: 辉仆
 ---
 
@@ -109,14 +109,42 @@ author: 辉仆
 - 相对较新，生态还在建设中
 - 国内能否长期稳定使用待观察
 
+### 2.5 OpenAI Codex
+
+|| 方案 | 月费 | 模型 | 额度 |
+|------|------|------|------|
+|| 随 ChatGPT Plus | $20 | GPT-5.4 / GPT-5.3-Codex | 33-168 次/5小时（本地任务）|
+|| 随 ChatGPT Pro | $200 | 同上 | 223-1120 次/5小时 |
+|| ChatGPT Business | 定制 | 同上，含云任务和代码审查 | 无限制 |
+|| Codex CLI (API 模式) | 按量付费 | GPT-5.3-Codex | 无限制 |
+
+**注意：** Codex 不是一个独立产品，而是集成在 ChatGPT 订阅体系中。2026 年 3 月更新后，Plus 和 Pro 用户均已获得 Codex 访问权限。
+
+**Codex CLI（命令行工具）：**
+- 支持两种计费模式：① 使用 ChatGPT 订阅中的额度，② 自带 API Key 按 token 付
+- 本地任务（IDE/CLI 内）：约 5 积分/条消息
+- 云端任务（PR 审查等）：约 25 积分/条消息
+- API 按量付费预计对标 GPT-4 Turbo 水平：输入约 $0.01-0.03/M，输出约 $0.03-0.12/M
+
+**优点：**
+- ChatGPT Plus 用户无需额外付费，白嫖党友好
+- CLI 工具对开发者友好，可并行多 agent
+- 与 GitHub 生态深度整合（Pro/Business 含自动化 PR 审查）
+
+**缺点：**
+- 额度有限，Pro 以下用户限制较严
+- 无独立 IDE，依赖 ChatGPT 生态
+- API 定价未完全公开，正式版价格未知
+
 ### 横向对比 - IDE 插件类
 
-| 方案 | 月费(最低) | 月费(高级) | 模型质量 | 生态成熟度 | 国内可用性 |
+|| 方案 | 月费(最低) | 月费(高级) | 模型质量 | 生态成熟度 | 国内可用性 |
 |------|-----------|-----------|---------|-----------|-----------|
-| GitHub Copilot | $0 | $39 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⚠️ 一般 |
-| Cursor | $0 | $200 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⚠️ 一般 |
-| Windsurf | $0 | $200 | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⚠️ 一般 |
-| TRAE | $3 | $100 | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⚠️ 待观察 |
+|| GitHub Copilot | $0 | $39 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⚠️ 一般 |
+|| Cursor | $0 | $200 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⚠️ 一般 |
+|| Windsurf | $0 | $200 | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⚠️ 一般 |
+|| TRAE | $3 | $100 | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⚠️ 待观察 |
+|| OpenAI Codex | $20（随 ChatGPT） | $200 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⚠️ 一般 |
 
 ---
 
@@ -276,6 +304,7 @@ AI 编程辅助工具已经进入战国时代，没有完美的方案，只有�
 - Cursor: https://cursor.com/pricing
 - Windsurf: https://windsurf.com/pricing
 - TRAE: https://www.trae.ai/pricing
+- OpenAI Codex: https://openai.com/codex
 - DeepSeek: https://platform.deepseek.com
 - Kimi (Moonshot): https://platform.kimi.com
 - 智谱 (GLM): https://open.bigmodel.cn

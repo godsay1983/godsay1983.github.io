@@ -82,11 +82,11 @@ function highlight(text, indices) {
   var result = '';
   var lastIndex = 0;
   indices.forEach(function(pair) {
-    result += text.slice(lastIndex, pair[0]);
-    result += '<mark>' + text.slice(pair[0], pair[1] + 1) + '</mark>';
+    result += text.substring(lastIndex, pair[0]);
+    result += '<mark>' + text.substring(pair[0], pair[1] + 1) + '</mark>';
     lastIndex = pair[1] + 1;
   });
-  result += text.slice(lastIndex);
+  result += text.substring(lastIndex);
   return result;
 }
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "让 AI 想清楚再回答：Hermes 的思维链与追问技巧"
+title: "Hermes 教程三：思维链与追问技巧"
 date: 2026-04-18 18:00:00 +0800
 categories: [使用技巧]
 tags: [思维链, 推理配置, 深度思考]

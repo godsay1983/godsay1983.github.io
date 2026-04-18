@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "零基础入门：5分钟跑通 Hermes Agent"
+title: "Hermes 教程二：零基础入门"
 date: 2026-04-18 18:00:00 +0800
 categories: [入门教程]
 tags: [新手入门, 安装配置, CLI]

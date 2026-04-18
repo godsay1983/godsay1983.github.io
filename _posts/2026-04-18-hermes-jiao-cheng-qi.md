@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "社区 Skills 大全：20+ 必备技能推荐"
+title: "Hermes 教程七：20+必备Skills推荐"
 date: 2026-04-18 18:00:00 +0800
 categories: [资源推荐]
 tags: [社区Skills, 技能市场, 效率工具, 推荐列表]

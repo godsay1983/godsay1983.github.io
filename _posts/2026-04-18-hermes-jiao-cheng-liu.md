@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "编写自己的 Skill：把重复操作自动化"
+title: "Hermes 教程六：编写自己的 Skill"
 date: 2026-04-18 18:00:00 +0800
 categories: [实战教程]
 tags: [自定义Skill, 自动化, SKILL.md, 编写教程]

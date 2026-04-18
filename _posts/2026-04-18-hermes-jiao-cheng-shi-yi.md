@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MCP 协议：接入 100+ 外部工具的秘诀"
+title: "Hermes 教程十一：MCP协议扩展"
 date: 2026-04-18 18:00:00 +0800
 categories: [Hermes Agent]
 tags: [MCP, Model Context Protocol, 外部工具, 扩展, mcp_servers]

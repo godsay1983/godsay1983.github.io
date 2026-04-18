@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "编程辅助方案对比：Cursor / Windsurf / Claude Code"
+title: "Hermes 教程十四：编程辅助方案对比"
 date: 2026-04-18 18:00:00 +0800
 categories: [编程工具]
 tags: [Cursor, Windsurf, Claude Code, AI 编程, 工具对比]

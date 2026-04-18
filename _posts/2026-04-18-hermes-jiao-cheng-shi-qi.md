@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "性能优化：加快响应、节省 Token"
+title: "Hermes 教程十七：性能优化与Token节省"
 date: 2026-04-18 18:00:00 +0800
 categories: [Hermes Agent]
 tags: [性能优化, Token 节省, context_compressor, 上下文压缩]

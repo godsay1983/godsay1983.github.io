@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "飞书 + QQ 同时在线：Hermes 多平台配置详解"
+title: "Hermes 教程四：飞书+QQ多平台配置"
 date: 2026-04-18 18:00:00 +0800
 categories: [平台接入]
 tags: [飞书, QQ, 多平台, 网关配置]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "常见问题与解决方案"
+title: "Hermes 教程十六：常见问题与解决方案"
 date: 2026-04-18 18:00:00 +0800
 categories: [Hermes Agent]
 tags: [故障排除, 常见问题, 飞书, QQ, Git, API]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "用 Hermes 做网络研究：MMX 搜索与信息聚合"
+title: "Hermes 教程十五：MMX网络研究"
 date: 2026-04-18 18:00:00 +0800
 categories: [Hermes Agent]
 tags: [MMX 搜索, 网络研究, 信息聚合, 自动化, 定时任务]

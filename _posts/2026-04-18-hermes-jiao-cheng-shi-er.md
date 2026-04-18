@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "用 Hermes Agent 管理 GitHub 项目：Issues 与 PR 实战"
+title: "Hermes 教程十二：GitHub项目管理"
 date: 2026-04-18 18:00:00 +0800
 categories: [Hermes Agent]
 tags: [GitHub, Issues, PR, Pull Request, gh CLI, github-pr-workflow]

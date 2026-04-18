@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "用 Hermes 运营个人博客：从创作到发布"
+title: "Hermes 教程十三：博客运营实战"
 date: 2026-04-18 18:00:00 +0800
 categories: [Hermes Agent]
 tags: [博客运营, Jekyll, GitHub, GitLab, 自动化]

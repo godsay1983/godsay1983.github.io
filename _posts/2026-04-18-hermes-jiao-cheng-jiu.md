@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "记忆系统：让 Hermes Agent 记住你的偏好"
+title: "Hermes 教程九：记忆系统"
 date: 2026-04-18 18:00:00 +0800
 categories: [Hermes Agent]
 tags: [记忆系统, memory, USER.md, MEMORY.md, 偏好]

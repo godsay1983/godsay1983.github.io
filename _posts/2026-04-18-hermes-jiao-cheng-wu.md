@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Skill 系统详解：Hermes 如何自动调用工具"
+title: "Hermes 教程五：Skill 系统详解"
 date: 2026-04-18 18:00:00 +0800
 categories: [核心机制]
 tags: [Skill系统, 工具调用, 自动化, 技能市场]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hermes Agent 全面解析：97.9k Stars 的开源 AI Agent 之王"
+title: "Hermes 教程一：全面解析"
 date: 2026-04-18 17:30:00 +0800
 categories: [技术]
 tags: [Hermes Agent, AI, 开源, Nous Research, Agent, 飞书, QQ]

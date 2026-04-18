@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "config.yaml 深度配置：模型、人格、工具开关"
+title: "Hermes 教程八：config.yaml深度配置"
 date: 2026-04-18 18:00:00 +0800
 categories: [Hermes Agent]
 tags: [配置, 模型, 人格, toolsets, config.yaml]

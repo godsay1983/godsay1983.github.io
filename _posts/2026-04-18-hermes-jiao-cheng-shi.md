@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "定时任务：让 Hermes Agent 每天自动执行"
+title: "Hermes 教程十：定时任务自动执行"
 date: 2026-04-18 18:00:00 +0800
 categories: [Hermes Agent]
 tags: [定时任务, cron, 自动化, schedule, 每日任务]

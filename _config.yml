@@ -19,6 +19,9 @@ highlighter: rouge
 paginate: 20
 paginate_path: "/posts/page:num/"
 
+# 搜索配置
+search_full_index: true
+
 # 时区
 timezone: Asia/Shanghai
 
@@ -26,3 +29,8 @@ timezone: Asia/Shanghai
 collections:
   posts:
     permalink: /posts/:year/:month/:day/:title/
+
+# GitHub（用于 Gitalk 评论，需在 GitHub OAuth App 注册后填入）
+github:
+  client_id: "YOUR_GITHUB_OAUTH_CLIENT_ID"
+  client_secret: "YOUR_GITHUB_OAUTH_CLIENT_SECRET"

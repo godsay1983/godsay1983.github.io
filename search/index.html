@@ -1,0 +1,99 @@
+---
+layout: default
+title: 文章搜索
+permalink: /search/
+---
+<style>
+.search-container { margin: 2rem 0; }
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 1rem;
+}
+.search-input:focus { outline: none; border-color: var(--accent); }
+#search-results { margin-top: 1.5rem; }
+.search-result {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  background: var(--bg-secondary);
+}
+.search-result a { font-size: 1.1rem; font-weight: bold; color: var(--accent); }
+.search-result .date { color: var(--text-muted); font-size: 0.9rem; }
+.search-result .excerpt { color: var(--text-muted); margin-top: 0.3rem; font-size: 0.95rem; }
+.no-results { color: var(--text-muted); padding: 2rem; text-align: center; }
+</style>
+
+<h2>🔍 文章搜索</h2>
+<div class="search-container">
+  <input type="text" id="search-input" class="search-input" placeholder="输入关键词搜索..." autofocus>
+</div>
+<div id="search-results" class="no-results">输入关键词开始搜索...</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+<script>
+// 加载搜索索引
+var searchDocs = null;
+var lunrIndex = null;
+
+function renderResults(results) {
+  var html = '';
+  if (results.length === 0) {
+    html = '<div class="no-results">没有找到相关文章 😅</div>';
+  } else {
+    results.forEach(function(r) {
+      var d = searchDocs[r.ref];
+      if (!d) return;
+      html += '<div class="search-result">';
+      html += '<div><a href="' + d.url + '">' + d.title + '</a> <span class="date">' + d.date + '</span></div>';
+      if (d.excerpt) html += '<div class="excerpt">' + d.excerpt.substring(0, 120) + '...</div>';
+      html += '</div>';
+    });
+  }
+  document.getElementById('search-results').innerHTML = html;
+}
+
+function doSearch(query) {
+  if (!lunrIndex || !query.trim()) {
+    document.getElementById('search-results').innerHTML = query.trim() ? '<div class="no-results">加载中...</div>' : '<div class="no-results">输入关键词开始搜索...</div>';
+    return;
+  }
+  try {
+    var results = lunrIndex.search(query + '~1');
+    if (results.length === 0) results = lunrIndex.search(query);
+    renderResults(results);
+  } catch(e) {
+    document.getElementById('search-results').innerHTML = '<div class="no-results">没有找到相关文章 😅</div>';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('/search.json').then(function(r){ return r.json(); }).then(function(docs) {
+    searchDocs = docs;
+    lunrIndex = lunr(function() {
+      this.ref('id');
+      this.field('title', {boost: 10});
+      this.field('tags', {boost: 5});
+      this.field('excerpt');
+      this.field('content');
+      docs.forEach(function(d){ this.add(d); }, this);
+    });
+    // 回填当前搜索
+    var params = new URLSearchParams(window.location.search);
+    var q = params.get('q');
+    if (q) {
+      document.getElementById('search-input').value = q;
+      doSearch(q);
+    }
+  });
+  document.getElementById('search-input').addEventListener('input', function(){ doSearch(this.value); });
+  document.getElementById('search-input').addEventListener('keypress', function(e){
+    if(e.key==='Enter'){ doSearch(this.value); }
+  });
+});
+</script>

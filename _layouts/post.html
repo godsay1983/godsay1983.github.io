@@ -12,6 +12,12 @@ layout: default
         <span>{{ cat }}</span>{% unless forloop.last %}, {% endunless %}
       {% endfor %}
       {% endif %}
+      {% if page.tags %}
+      &nbsp;|&nbsp; 标签：
+      {% for tag in page.tags %}
+        <span>{{ tag }}</span>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+      {% endif %}
     </p>
   </header>
 
@@ -21,4 +27,23 @@ layout: default
   <p style="margin-top: 2rem;">
     <a href="/">← 返回首页</a>
   </p>
+
+  {% if jekyll.environment == "production" and site.github.client_id %}
+  <hr>
+  <div id="gitalk-container" style="margin-top: 2rem;"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js"></script>
+  <script>
+  var gitalk = new Gitalk({
+    clientID: '{{ site.github.client_id }}',
+    clientSecret: '{{ site.github.client_secret }}',
+    repo: 'godsay1983.github.io',
+    owner: 'godsay1983',
+    admin: ['godsay1983'],
+    id: '{{ page.url | truncate: 50, "" }}',
+    distractionFreeMode: false
+  });
+  gitalk.render('gitalk-container');
+  </script>
+  {% endif %}
 </article>

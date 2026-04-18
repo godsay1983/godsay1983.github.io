@@ -89,9 +89,43 @@
     .post-list .date { color: var(--text-muted); margin-right: 0.5rem; }
     /* header 导航 */
     .site-title { font-size: 1.4rem; font-weight: bold; }
-    .site-nav { margin-top: 0.5rem; }
+    .site-nav { margin-top: 0.5rem; display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
     .site-nav a { margin-right: 1rem; color: var(--text-muted); }
     .site-nav a:hover { color: var(--accent); }
+    /* 搜索框 */
+    .header-search {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .header-search input {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.3rem 0.6rem;
+      color: var(--text);
+      font-size: 0.85rem;
+      width: 180px;
+    }
+    .header-search input:focus { outline: none; border-color: var(--accent); }
+    .header-search button {
+      background: var(--accent);
+      border: none;
+      border-radius: 4px;
+      padding: 0.3rem 0.6rem;
+      color: #fff;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    /* 不蒜子统计 */
+    .site-stats {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+    /* 底部统计 */
+    .footer-stats { display: flex; gap: 1.5rem; font-size: 0.85rem; color: var(--text-muted); }
   </style>
 </head>
 <body>
@@ -101,7 +135,17 @@
       <nav class="site-nav">
         <a href="/">首页</a>
         <a href="/posts/">文章</a>
+        <a href="/search/">搜索</a>
+        <div class="header-search">
+          <input type="text" id="header-search-input" placeholder="搜索文章..." onkeypress="if(event.key==='Enter'){window.location='/search/?q='+encodeURIComponent(this.value);}">
+          <button onclick="var v=document.getElementById('header-search-input').value;if(v)window.location='/search/?q='+encodeURIComponent(v);">🔍</button>
+        </div>
       </nav>
+      <div class="site-stats">
+        <span id="busuanzi_container_site_pv">访问 <span id="busuanzi_value_site_pv">-</span> 次</span>
+        &nbsp;|&nbsp;
+        <span id="busuanzi_container_site_uv">访客 <span id="busuanzi_value_site_uv">-</span> 人</span>
+      </div>
     </header>
 
     <main>
@@ -109,8 +153,17 @@
     </main>
 
     <footer>
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}</p>
+      <div class="footer-stats">
+        <span>© {{ site.time | date: "%Y" }} {{ site.author }}</span>
+        <span>|</span>
+        <span id="busuanzi_container_site_pv_2">访问 <span id="busuanzi_value_site_pv">-</span></span>
+        <span>|</span>
+        <span id="busuanzi_container_site_uv_2">访客 <span id="busuanzi_value_site_uv">-</span></span>
+      </div>
     </footer>
   </div>
+
+  <!-- 不蒜子统计 -->
+  <script async src="https://busuanzi.zyavo.com/16/busuanzi_76.min.js"></script>
 </body>
 </html>

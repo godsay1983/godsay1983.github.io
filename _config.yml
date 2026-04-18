@@ -32,5 +32,5 @@ collections:
 
 # GitHub（用于 Gitalk 评论，需在 GitHub OAuth App 注册后填入）
 github:
-  client_id: "YOUR_GITHUB_OAUTH_CLIENT_ID"
-  client_secret: "YOUR_GITHUB_OAUTH_CLIENT_SECRET"
+  client_id: "REMOVED_CLIENT_ID"
+  client_secret: "REMOVED_CLIENT_SECRET"

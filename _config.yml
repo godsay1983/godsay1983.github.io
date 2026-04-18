@@ -13,7 +13,7 @@ kramdown:
 # 文章目录
 future: true
 show_drafts: false
-limit_posts: 10
+limit_posts: 100
 highlighter: rouge
 
 # 时区

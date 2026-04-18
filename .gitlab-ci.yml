@@ -4,6 +4,7 @@ variables:
   JEKYLL_ENV: production
   JEKYLL_GITALK: "false"
   GITLAB_CI: "true"
+  PAGES_REPO_NWO: "caozhipeng/blog"
 
 pages:
   stage: deploy

@@ -1,49 +1,125 @@
 ---
 layout: default
 ---
-<article>
-  <header style="margin-bottom: 2rem;">
-    <h1 style="border:none; font-size: 2rem; margin-bottom: 0.5rem;">{{ page.title }}</h1>
-    <p style="color: var(--text-muted);">
-      {{ page.date | date: "%Y-%m-%d" }}
-      {% if page.categories %}
-      &nbsp;|&nbsp; 分类：
-      {% for cat in page.categories %}
-        <span>{{ cat }}</span>{% unless forloop.last %}, {% endunless %}
-      {% endfor %}
-      {% endif %}
-      {% if page.tags %}
-      &nbsp;|&nbsp; 标签：
-      {% for tag in page.tags %}
-        <span>{{ tag }}</span>{% unless forloop.last %}, {% endunless %}
-      {% endfor %}
-      {% endif %}
+<style>
+.post-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.post-content {
+  flex: 1;
+  min-width: 0;
+}
+/* 侧边目录 */
+.post-toc {
+  position: sticky;
+  top: 2rem;
+  width: 220px;
+  flex-shrink: 0;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+.post-toc-title {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.post-toc a {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0;
+}
+.post-toc a:hover { color: var(--accent); }
+.post-toc .toc-h3 { padding-left: 0.8rem; }
+@media (max-width: 900px) {
+  .post-layout { flex-direction: column; }
+  .post-toc { width: 100%; position: static; max-height: none; }
+}
+</style>
+
+<div class="post-layout">
+  <article class="post-content">
+    <header style="margin-bottom: 2rem;">
+      <h1 style="border:none; font-size: 2rem; margin-bottom: 0.5rem;">{{ page.title }}</h1>
+      <p style="color: var(--text-muted);">
+        {{ page.date | date: "%Y-%m-%d" }}
+        {% if page.categories %}
+        &nbsp;|&nbsp; 分类：
+        {% for cat in page.categories %}
+          <span>{{ cat }}</span>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+        {% endif %}
+        {% if page.tags %}
+        &nbsp;|&nbsp; 标签：
+        {% for tag in page.tags %}
+          <span>{{ tag }}</span>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+        {% endif %}
+      </p>
+    </header>
+
+    {{ content }}
+
+    <hr>
+    <p style="margin-top: 2rem;">
+      <a href="/">← 返回首页</a>
     </p>
-  </header>
 
-  {{ content }}
+    {% if jekyll.environment == "production" and site.github.client_id %}
+    <hr>
+    <div id="gitalk-container" style="margin-top: 2rem;"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js"></script>
+    <script>
+    var gitalk = new Gitalk({
+      clientID: '{{ site.github.client_id }}',
+      clientSecret: '{{ site.github.client_secret }}',
+      repo: 'godsay1983.github.io',
+      owner: 'godsay1983',
+      admin: ['godsay1983'],
+      id: '{{ page.url | truncate: 50, "" }}',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+    </script>
+    {% endif %}
+  </article>
 
-  <hr>
-  <p style="margin-top: 2rem;">
-    <a href="/">← 返回首页</a>
-  </p>
+  <nav id="post-toc" class="post-toc" style="display:none;">
+    <div class="post-toc-title">📖 目录</div>
+    <div id="toc-list"></div>
+  </nav>
+</div>
 
-  {% if jekyll.environment == "production" and site.github.client_id %}
-  <hr>
-  <div id="gitalk-container" style="margin-top: 2rem;"></div>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js"></script>
-  <script>
-  var gitalk = new Gitalk({
-    clientID: '{{ site.github.client_id }}',
-    clientSecret: '{{ site.github.client_secret }}',
-    repo: 'godsay1983.github.io',
-    owner: 'godsay1983',
-    admin: ['godsay1983'],
-    id: '{{ page.url | truncate: 50, "" }}',
-    distractionFreeMode: false
+<script>
+// 自动从文章内容生成目录
+document.addEventListener('DOMContentLoaded', function() {
+  var content = document.querySelector('.post-content');
+  var toc = document.getElementById('post-toc');
+  var tocList = document.getElementById('toc-list');
+  if (!content || !toc || !tocList) return;
+
+  var headings = content.querySelectorAll('h2, h3');
+  if (headings.length === 0) return;
+
+  headings.forEach(function(h, i) {
+    if (!h.id) h.id = 'heading-' + i;
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    if (h.tagName === 'H3') a.className = 'toc-h3';
+    tocList.appendChild(a);
   });
-  gitalk.render('gitalk-container');
-  </script>
-  {% endif %}
-</article>
+
+  toc.style.display = 'block';
+});
+</script>

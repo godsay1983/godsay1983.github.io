@@ -40,7 +40,7 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
-    "title": "老鹰107-106大逆转尼克斯，Trae Young 32分主导翻盘，系列赛1-0领先",
+    "title": "老鹰107-106大逆转尼克斯，McCollum 32分末节救赎，系列赛1-1扳平",
     "url": "/posts/2026/04/21/nba-playoffs-knicks-hawks-analysis/",
     "date": "2026-04-21",
     "categories": "",
@@ -582,7 +582,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;
+];;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

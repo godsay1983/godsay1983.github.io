@@ -40,6 +40,18 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "为什么有些人总是埋怨社会，却从不想着改变自己",
+    "url": "/posts/2026/04/21/why-people-always-complain-about-society/",
+    "date": "2026-04-21",
+    "categories": "",
+    "tags": [
+      "观点",
+      "社会观察",
+      "随笔"
+    ],
+    "excerpt": "如果你想帮他们 可以试着这样聊："
+  },
+  {
     "title": "森林狼19分惊天逆转掘金，系列赛1-1扳平，爱德华兹30+10率队取胜",
     "url": "/posts/2026/04/21/nba-playoffs-timberwolves-nuggets-analysis/",
     "date": "2026-04-21",
@@ -595,7 +607,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;
+];;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

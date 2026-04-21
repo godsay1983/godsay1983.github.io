@@ -55,14 +55,16 @@ for (const file of files) {
   const { data, content } = matter(raw);
 
   const slug = slugify(file);
-  const url = `/posts/${data.date.getFullYear()}/${String(data.date.getMonth() + 1).padStart('2', '0')}/${String(data.date.getDate()).padStart('2', '0')}/${slug}/`;
+  const dateStr = typeof data.date === 'string' ? data.date : (data.date ? new Date(data.date).toISOString().split('T')[0] : '');
+  const d = typeof data.date === 'string' ? new Date(data.date) : data.date;
+  const url = `/posts/${d.getFullYear()}/${String(d.getMonth() + 1).padStart('2', '0')}/${String(d.getDate()).padStart('2', '0')}/${slug}/`;
   const excerpt = data.excerpt || getExcerpt(content);
 
   posts.push({
     title: data.title || slug,
     url,
-    date: data.date ? data.date.toISOString().split('T')[0] : '',
-    categories: (data.categories || []).join(','),
+    date: dateStr,
+    categories: Array.isArray(data.categories) ? data.categories.join(',') : (data.categories || ''),
     tags: data.tags || [],
     excerpt: excerpt
   });

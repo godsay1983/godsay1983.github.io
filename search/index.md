@@ -40,6 +40,19 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "老鹰107-106大逆转尼克斯，Trae Young 32分主导翻盘，系列赛1-0领先",
+    "url": "/posts/2026/04/21/nba-playoffs-knicks-hawks-analysis/",
+    "date": "2026-04-21",
+    "categories": "",
+    "tags": [
+      "NBA",
+      "季后赛",
+      "尼克斯",
+      "老鹰"
+    ],
+    "excerpt": "球员数据 | 球员 | 球队 | 数据 |"
+  },
+  {
     "title": "骑士115-105再胜猛龙，系列赛2-0领先，Harden Mitchell双星闪耀",
     "url": "/posts/2026/04/21/nba-playoffs-cavaliers-raptors-analysis/",
     "date": "2026-04-21",
@@ -569,7 +582,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;
+];;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

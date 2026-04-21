@@ -29,7 +29,7 @@ function getExcerpt(content) {
     }
     if (started && line.trim()) {
       // 去掉 Markdown 标题标记
-      const clean = line.replace(/^#+\s*/, '').replace(/\*\*/g, '').replace(/\*/g, '').replace(/`/g, '');
+      const clean = line.replace(/^#+\s*/, '').replace(/\*\*/g, '').replace(/\*/g, '').replace(/`/g, '').replace(/\{%.*?%\}/g, '').replace(/\{\{.*?\}\}/g, '');
       excerptLines.push(clean);
       if (excerptLines.length >= 2) break;
     }

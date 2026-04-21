@@ -322,7 +322,7 @@ var searchData = [
       "context_compressor",
       "上下文压缩"
     ],
-    "excerpt": "{% for post in paginator.posts | limit: 10 %}   <article>"
+    "excerpt": "   <article>"
   },
   {
     "title": "Hermes 教程十六：常见问题与解决方案",
@@ -569,7 +569,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;
+];;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

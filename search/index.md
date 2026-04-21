@@ -91,6 +91,20 @@ var searchData = [
     "excerpt": "球员数据 | 球员 | 球队 | 数据 |"
   },
   {
+    "title": "华为Pura系列及全场景新品发布会：麒麟9030统治全场，全生态矩阵亮相",
+    "url": "/posts/2026/04/21/huawei-pura-launch-event-review/",
+    "date": "2026-04-21",
+    "categories": "",
+    "tags": [
+      "科技",
+      "华为",
+      "新品发布",
+      "手机",
+      "折叠屏"
+    ],
+    "excerpt": "1. Pura 90系列：2亿像素的影像怪兽 核心配置"
+  },
+  {
     "title": "119-84！卫冕冠军35分狂胜太阳，亚历山大17罚砍25分，三节打卡下班",
     "url": "/posts/2026/04/20/nba-playoffs-thunder-suns-analysis/",
     "date": "2026-04-20",
@@ -607,7 +621,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;
+];;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

@@ -40,6 +40,18 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "为什么越来越少人发朋友圈了？",
+    "url": "/posts/2026/04/22/why-people-quit-social-media/",
+    "date": "2026-04-22 06:30:00 +0800",
+    "categories": "随想",
+    "tags": [
+      "社交媒体",
+      "朋友圈",
+      "互联网"
+    ],
+    "excerpt": "发社交媒体本质上是在表演生活，表演多了自己也累。越来越多的人选择沉默，不是因为生活变得无聊，而是因为表达的成本和回报越来越不成正比。"
+  },
+  {
     "title": "AI编程工具集体涨价背后：原因、趋势与应对策略",
     "url": "/posts/2026/04/22/ai-coding-tools-price-change-analysis/",
     "date": "2026-04-22",
@@ -636,7 +648,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;
+];;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

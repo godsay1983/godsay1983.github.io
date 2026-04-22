@@ -40,6 +40,21 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "AI编程工具集体涨价背后：原因、趋势与应对策略",
+    "url": "/posts/2026/04/22/ai-coding-tools-price-change-analysis/",
+    "date": "2026-04-22",
+    "categories": "",
+    "tags": [
+      "AI编程",
+      "GitHub Copilot",
+      "Windsurf",
+      "阿里云",
+      "通义",
+      "订阅"
+    ],
+    "excerpt": "三、普通用户的应对策略 1. 多平台分散风险，不要把鸡蛋放一个篮子里"
+  },
+  {
     "title": "为什么有些人总是埋怨社会，却从不想着改变自己",
     "url": "/posts/2026/04/21/why-people-always-complain-about-society/",
     "date": "2026-04-21",
@@ -621,7 +636,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;
+];;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

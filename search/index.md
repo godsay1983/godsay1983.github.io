@@ -40,6 +40,20 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "活塞防守封锁魔术，98-83攻下主场——系列赛回到同一起跑线",
+    "url": "/posts/2026/04/23/magic-pistons-g2-analysis/",
+    "date": "2026-04-23 10:30:00 +0800",
+    "categories": "NBA",
+    "tags": [
+      "NBA季后赛",
+      "活塞",
+      "魔术",
+      "班凯罗",
+      "康宁汉姆"
+    ],
+    "excerpt": "活塞在G2用窒息的防守让魔术全场仅得83分，第三节单节38-16的攻势彻底拉开分差。班凯罗受限严重仅得18分，康宁汉姆稳定输出带队取胜。系列赛1-1战平，G3将移师奥兰多。"
+  },
+  {
     "title": "为什么越来越少人发朋友圈了？",
     "url": "/posts/2026/04/22/why-people-quit-social-media/",
     "date": "2026-04-22 06:30:00 +0800",
@@ -689,7 +703,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;
+];;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

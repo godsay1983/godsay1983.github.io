@@ -40,7 +40,7 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
-    "title": "亚历山大35分，雷霆120-107再胜太阳——太阳0-2绝境，KD孤掌难鸣",
+    "title": "亚历山大37+9，雷霆再胜太阳2-0领先——Dillon Brooks空砍30分难救主",
     "url": "/posts/2026/04/23/thunder-suns-g2-analysis/",
     "date": "2026-04-23 11:30:00 +0800",
     "categories": "NBA",
@@ -49,9 +49,9 @@ var searchData = [
       "雷霆",
       "太阳",
       "亚历山大",
-      "杜兰特"
+      "Dillon Brooks"
     ],
-    "excerpt": "雷霆在第二节和第三节合计打出70-48的攻击波，三节结束领先18分彻底打卡下班。太阳0-2落后陷入绝境，G3回到凤凰城已无退路。KD空砍30+无力回天，布克连续两场迷失。"
+    "excerpt": "雷霆主场120-107再胜太阳，系列赛2-0领先。亚历山大砍下37分9助攻主导比赛，Dillon Brooks狂砍30分成为太阳唯一亮点，但孤立无援无力回天。"
   },
   {
     "title": "活塞防守封锁魔术，98-83攻下主场——系列赛回到同一起跑线",
@@ -717,7 +717,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

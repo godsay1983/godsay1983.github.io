@@ -40,6 +40,20 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "DeepSeek V4 正式发布：百万Token上下文，挑战GPT-4 Turbo",
+    "url": "/posts/2026/04/24/deepseek-v4-released/",
+    "date": "2026-04-24",
+    "categories": "",
+    "tags": [
+      "DeepSeek",
+      "AI大模型",
+      "V4",
+      "百万上下文",
+      "华为芯片"
+    ],
+    "excerpt": ""
+  },
+  {
     "title": "亚历山大37+9，雷霆再胜太阳2-0领先——Dillon Brooks空砍30分难救主",
     "url": "/posts/2026/04/23/thunder-suns-g2-analysis/",
     "date": "2026-04-23 11:30:00 +0800",
@@ -717,7 +731,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

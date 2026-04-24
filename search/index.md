@@ -40,6 +40,51 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "【G3复盘】森林狼113-96掘金：约基奇26中7背后的防守真相",
+    "url": "/posts/2026/04/24/nba-playoffs-timberwolves-nuggets-g3-analysis/",
+    "date": "2026-04-24",
+    "categories": "",
+    "tags": [
+      "NBA",
+      "季后赛",
+      "森林狼",
+      "掘金",
+      "约基奇",
+      "爱德华兹"
+    ],
+    "excerpt": "战术分析 1. 森林狼：防守策略的完美执行"
+  },
+  {
+    "title": "【G3复盘】猛龙126-104骑士：巴恩斯33分11助攻击碎横扫梦",
+    "url": "/posts/2026/04/24/nba-playoffs-raptors-cavaliers-g3-analysis/",
+    "date": "2026-04-24",
+    "categories": "",
+    "tags": [
+      "NBA",
+      "季后赛",
+      "猛龙",
+      "骑士",
+      "巴恩斯",
+      "哈登"
+    ],
+    "excerpt": "战术分析 1. 猛龙：双星闪耀击溃骑士防线"
+  },
+  {
+    "title": "【G3复盘】老鹰109-108尼克斯：CJ准绝杀背后的战术博弈",
+    "url": "/posts/2026/04/24/nba-playoffs-hawks-knicks-g3-analysis/",
+    "date": "2026-04-24",
+    "categories": "",
+    "tags": [
+      "NBA",
+      "季后赛",
+      "老鹰",
+      "尼克斯",
+      "麦科勒姆",
+      "库明加"
+    ],
+    "excerpt": "战术分析 1. 老鹰：库里式战术的教科书演绎"
+  },
+  {
     "title": "DeepSeek V4 正式发布：百万Token上下文，挑战GPT-4 Turbo",
     "url": "/posts/2026/04/24/deepseek-v4-released/",
     "date": "2026-04-24",
@@ -731,7 +776,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

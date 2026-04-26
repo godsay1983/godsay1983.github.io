@@ -40,6 +40,38 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "Dosunmu狂砍43分创生涯新高，森林狼大胜掘金3-1拿到赛点",
+    "url": "/posts/2026/04/26/nba-playoffs-timberwolves-nuggets/",
+    "date": "2026-04-26 12:00:00 +0800",
+    "categories": "NBA",
+    "tags": [],
+    "excerpt": "球员数据 森林狼："
+  },
+  {
+    "title": "SGA狂砍42分！雷霆横扫太阳晋级在望",
+    "url": "/posts/2026/04/26/nba-playoffs-thunder-suns/",
+    "date": "2026-04-26 12:00:00 +0800",
+    "categories": "NBA",
+    "tags": [],
+    "excerpt": "球员数据 雷霆："
+  },
+  {
+    "title": "魔术主场险胜活塞系列赛2-1，Banchero全能表现率队占先",
+    "url": "/posts/2026/04/26/nba-playoffs-magic-pistons/",
+    "date": "2026-04-26 12:00:00 +0800",
+    "categories": "NBA",
+    "tags": [],
+    "excerpt": "球员数据 魔术："
+  },
+  {
+    "title": "Towns砍下赛季首个三双，尼克斯大胜老鹰扳平系列赛",
+    "url": "/posts/2026/04/26/nba-playoffs-knicks-hawks/",
+    "date": "2026-04-26 12:00:00 +0800",
+    "categories": "NBA",
+    "tags": [],
+    "excerpt": "球员数据 尼克斯："
+  },
+  {
     "title": "文班缺阵马刺逆转15分！卡斯尔33分+哈珀27分，榜眼秀导演19分大翻盘",
     "url": "/posts/2026/04/25/spurs-blazers-g3-analysis/",
     "date": "2026-04-25 14:00:00 +0800",
@@ -820,7 +852,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

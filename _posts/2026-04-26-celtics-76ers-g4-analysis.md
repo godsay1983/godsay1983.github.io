@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "绿军大胜76人拿到赛点！Tatum 30分11助攻完胜Embiid"
-date: 2026-04-26 16:00:00 +0800
+date: 2026-04-27 16:00:00 +0800
 categories: [NBA]
 ---
 

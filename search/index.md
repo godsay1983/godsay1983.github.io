@@ -40,17 +40,25 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "从一次厕所门口抽烟引发的教育思考",
+    "url": "/posts/2026/04/27/education-boundary-awareness-and-responsibility/",
+    "date": "2026-04-27 20:00:00 +0800",
+    "categories": "随笔",
+    "tags": [],
+    "excerpt": "从个体到教育 由这件事，引发了一场关于教育的讨论。"
+  },
+  {
     "title": "马刺客场大胜拿到赛点！Wembanyama 27分12篮板统治内线",
-    "url": "/posts/2026/04/26/spurs-blazers-g4-analysis/",
-    "date": "2026-04-26 14:00:00 +0800",
+    "url": "/posts/2026/04/27/spurs-blazers-g4-analysis/",
+    "date": "2026-04-27 14:00:00 +0800",
     "categories": "NBA",
     "tags": [],
     "excerpt": "球员数据 马刺："
   },
   {
     "title": "猛龙主场险胜骑士扳平系列赛，Barnes砍23分主导逆转",
-    "url": "/posts/2026/04/26/raptors-cavaliers-g4-analysis/",
-    "date": "2026-04-26 12:00:00 +0800",
+    "url": "/posts/2026/04/27/raptors-cavaliers-g4-analysis/",
+    "date": "2026-04-27 12:00:00 +0800",
     "categories": "NBA",
     "tags": [],
     "excerpt": "球员数据 猛龙："
@@ -88,17 +96,17 @@ var searchData = [
     "excerpt": "球员数据 尼克斯："
   },
   {
-    "title": "火箭主场大胜湖人拿到赛点！Amen Thompson 23分7助攻引领进攻",
-    "url": "/posts/2026/04/26/lakers-rockets-g4-analysis/",
-    "date": "2026-04-26 18:00:00 +0800",
+    "title": "火箭主场力克湖人扳回一城！Amen Thompson 23分7助攻引领进攻",
+    "url": "/posts/2026/04/27/lakers-rockets-g4-analysis/",
+    "date": "2026-04-27 18:00:00 +0800",
     "categories": "NBA",
     "tags": [],
     "excerpt": "球员数据 火箭："
   },
   {
     "title": "绿军大胜76人拿到赛点！Tatum 30分11助攻完胜Embiid",
-    "url": "/posts/2026/04/26/celtics-76ers-g4-analysis/",
-    "date": "2026-04-26 16:00:00 +0800",
+    "url": "/posts/2026/04/27/celtics-76ers-g4-analysis/",
+    "date": "2026-04-27 16:00:00 +0800",
     "categories": "NBA",
     "tags": [],
     "excerpt": "球员数据 凯尔特人："
@@ -884,7 +892,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

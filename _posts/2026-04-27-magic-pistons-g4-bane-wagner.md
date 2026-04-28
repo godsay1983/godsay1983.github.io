@@ -1,6 +1,6 @@
 ---
 title: "魔术险胜活塞系列赛3-1听牌：Desmond Bane 22分锁胜局，活塞冠军梦悬于一线"
-date: 2026-04-27
+date: 2026-04-28
 categories: NBA
 tags: [NBA, Playoffs, Magic, Pistons, 2026]
 ---

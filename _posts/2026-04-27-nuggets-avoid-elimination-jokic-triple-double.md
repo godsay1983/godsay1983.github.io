@@ -1,6 +1,6 @@
 ---
 title: "约基奇27+12+16三双拯救赛点：掘金125-113森林狼，卫冕冠军拒绝横扫"
-date: 2026-04-27
+date: 2026-04-28
 categories: NBA
 tags: [NBA, Playoffs, Nuggets, Timberwolves, Jokic, 2026]
 ---

@@ -40,6 +40,50 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "雷霆4-0横扫太阳晋级西部半决赛：SGA 31+8带飞全队，西部新王已无对手？",
+    "url": "/posts/2026/04/27/thunder-sweeps-suns-sga-31pts/",
+    "date": "2026-04-27",
+    "categories": "NBA",
+    "tags": [
+      "NBA",
+      "Playoffs",
+      "Thunder",
+      "Suns",
+      2026,
+      "Shai"
+    ],
+    "excerpt": ""
+  },
+  {
+    "title": "约基奇27+12+16三双拯救赛点：掘金125-113森林狼，卫冕冠军拒绝横扫",
+    "url": "/posts/2026/04/27/nuggets-avoid-elimination-jokic-triple-double/",
+    "date": "2026-04-27",
+    "categories": "NBA",
+    "tags": [
+      "NBA",
+      "Playoffs",
+      "Nuggets",
+      "Timberwolves",
+      "Jokic",
+      2026
+    ],
+    "excerpt": ""
+  },
+  {
+    "title": "魔术险胜活塞系列赛3-1听牌：Desmond Bane 22分锁胜局，活塞冠军梦悬于一线",
+    "url": "/posts/2026/04/27/magic-pistons-g4-bane-wagner/",
+    "date": "2026-04-27",
+    "categories": "NBA",
+    "tags": [
+      "NBA",
+      "Playoffs",
+      "Magic",
+      "Pistons",
+      2026
+    ],
+    "excerpt": ""
+  },
+  {
     "title": "从一次厕所门口抽烟引发的教育思考",
     "url": "/posts/2026/04/27/education-boundary-awareness-and-responsibility/",
     "date": "2026-04-27 20:00:00 +0800",
@@ -892,7 +936,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

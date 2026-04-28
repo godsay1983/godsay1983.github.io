@@ -1,6 +1,6 @@
 ---
 title: "雷霆4-0横扫太阳晋级西部半决赛：SGA 31+8带飞全队，西部新王已无对手？"
-date: 2026-04-27
+date: 2026-04-28
 categories: NBA
 tags: [NBA, Playoffs, Thunder, Suns, 2026, Shai]
 ---

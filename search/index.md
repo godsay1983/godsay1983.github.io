@@ -40,6 +40,47 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "马刺4-1绅士横扫晋级次轮！文班14篮板守护禁区，超市新版三巨头成型",
+    "url": "/posts/2026/04/29/spurs-blazers-g5-advance-semifinals/",
+    "date": "2026-04-29",
+    "categories": "NBA季后赛",
+    "tags": [
+      "马刺",
+      "开拓者",
+      "Wembanyama",
+      "Fox",
+      "季后赛首轮"
+    ],
+    "excerpt": ""
+  },
+  {
+    "title": "布伦森39分狂飙！尼克斯26分大胜老鹰拿到赛点",
+    "url": "/posts/2026/04/29/knicks-hawks-g5-brunson-39pts/",
+    "date": "2026-04-29",
+    "categories": "NBA季后赛",
+    "tags": [
+      "尼克斯",
+      "老鹰",
+      "布伦森",
+      "季后赛首轮"
+    ],
+    "excerpt": ""
+  },
+  {
+    "title": "Embiid 33分率队大胜！76人客场扳倒绿军首轮悬念回归",
+    "url": "/posts/2026/04/29/76ers-celtics-g5-embiid-33pts/",
+    "date": "2026-04-29",
+    "categories": "NBA季后赛",
+    "tags": [
+      "76人",
+      "凯尔特人",
+      "Embiid",
+      "布克",
+      "季后赛首轮"
+    ],
+    "excerpt": ""
+  },
+  {
     "title": "雷霆4-0横扫太阳晋级西部半决赛：SGA 31+8带飞全队，西部新王已无对手？",
     "url": "/posts/2026/04/28/thunder-sweeps-suns-sga-31pts/",
     "date": "2026-04-28",
@@ -936,7 +977,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

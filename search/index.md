@@ -40,6 +40,45 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "火箭防守制胜客场击败湖人！三分线外锁死詹姆斯，系列赛悬念回归",
+    "url": "/posts/2026/04/30/rockets-stun-lakers-99-93-系列赛悬念回归/",
+    "date": "2026-04-30",
+    "categories": "NBA季后赛",
+    "tags": [
+      "火箭",
+      "湖人",
+      "季后赛首轮",
+      "防守制胜"
+    ],
+    "excerpt": ""
+  },
+  {
+    "title": "活塞内线碾压魔术取赛点，禁区得分48分创系列赛新高",
+    "url": "/posts/2026/04/30/pistons-edge-out-magic-116-109-pistons-lead-3-2/",
+    "date": "2026-04-30",
+    "categories": "NBA季后赛",
+    "tags": [
+      "活塞",
+      "魔术",
+      "季后赛首轮",
+      "内线统治"
+    ],
+    "excerpt": ""
+  },
+  {
+    "title": "骑士125-120险胜猛龙！三分雨浇灭猛龙反扑，系列赛3-2领先",
+    "url": "/posts/2026/04/30/cavaliers-edge-out-raptors-125-120-high-scoring-thriller/",
+    "date": "2026-04-30",
+    "categories": "NBA季后赛",
+    "tags": [
+      "骑士",
+      "猛龙",
+      "季后赛首轮",
+      "三分雨"
+    ],
+    "excerpt": ""
+  },
+  {
     "title": "马刺4-1绅士横扫晋级次轮！文班14篮板守护禁区，超市新版三巨头成型",
     "url": "/posts/2026/04/29/spurs-blazers-g5-advance-semifinals/",
     "date": "2026-04-29",
@@ -977,7 +1016,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

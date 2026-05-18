@@ -40,6 +40,20 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "特朗普2026年访华：中美关系新定位与五大共识",
+    "url": "/posts/2026/05/18/trump-visit-china-2026/",
+    "date": "2026-05-18 10:00:00 +0800",
+    "categories": "国际关系,中美关系,地缘政治",
+    "tags": [
+      "特朗普",
+      "习近平",
+      "中美关系",
+      "贸易战",
+      "建设性战略稳定关系"
+    ],
+    "excerpt": "🤝 五大核心共识 此次访问最重要的成果是双方同意将构建\"中美建设性战略稳定关系\"作为中美关系新定位。以往美国政府常用\"战略竞争\"来定义中美关系，而中方一直反对这种表述。这次双方达成的表述意味着："
+  },
+  {
     "title": "火箭防守制胜客场击败湖人！三分线外锁死詹姆斯，系列赛悬念回归",
     "url": "/posts/2026/04/30/rockets-stun-lakers-99-93-系列赛悬念回归/",
     "date": "2026-04-30",
@@ -1016,7 +1030,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

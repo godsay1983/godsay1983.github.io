@@ -40,6 +40,42 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "同样的老将迟暮，不同的命运剧本——2026 美加墨世界杯梅西 C 罗首秀反差解剖",
+    "url": "/posts/2026/06/12/messi-ronaldo-2026-world-cup-debut/",
+    "date": "2026-06-12 16:00:00 +0800",
+    "categories": "体育,世界杯,足球评论",
+    "tags": [
+      "世界杯",
+      "2026世界杯",
+      "美加墨",
+      "梅西",
+      "C罗",
+      "阿尔及利亚",
+      "刚果金",
+      "阿根廷",
+      "葡萄牙",
+      "帽子戏法",
+      "球王"
+    ],
+    "excerpt": "二、C 罗\"差强人意\"的四层原因 2.1 战术层面：马丁内斯的体系拖累"
+  },
+  {
+    "title": "softaworks/agent-toolkit：一站式 AI 编程技能库，让 Claude Code 能力翻倍",
+    "url": "/posts/2026/05/28/agent-toolkit-intro/",
+    "date": "2026-05-28 12:00:00 +0800",
+    "categories": "AI编程,Claude Code,开发效率",
+    "tags": [
+      "Claude Code",
+      "agent-toolkit",
+      "skills",
+      "slash commands",
+      "agents",
+      "编程辅助",
+      "AI工具"
+    ],
+    "excerpt": "二、Skills：40个专业技能 Skills 是最常用的部分，每个 Skill 都是一个独立的功能模块，可单独安装。以下按类别介绍。"
+  },
+  {
     "title": "特朗普2026年访华：中美关系新定位与五大共识",
     "url": "/posts/2026/05/18/trump-visit-china-2026/",
     "date": "2026-05-18 10:00:00 +0800",
@@ -1065,7 +1101,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

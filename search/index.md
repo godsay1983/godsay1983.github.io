@@ -40,6 +40,20 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "杨瀚森的三分钟真空：2米13的状元秀，为何在开拓者连垃圾时间都排不上",
+    "url": "/posts/2026/11/16/yang-hansen-portland-rotation-analysis/",
+    "date": "2026-11-16",
+    "categories": "NBA",
+    "tags": [
+      "NBA",
+      "杨瀚森",
+      "开拓者",
+      "发展联盟",
+      "2026-27"
+    ],
+    "excerpt": "二、原因解剖：三层结构 第一层：五号位只有48分钟，早被瓜分完了"
+  },
+  {
     "title": "同样的老将迟暮，不同的命运剧本——2026 美加墨世界杯梅西 C 罗首秀反差解剖",
     "url": "/posts/2026/06/12/messi-ronaldo-2026-world-cup-debut/",
     "date": "2026-06-12 16:00:00 +0800",
@@ -1101,7 +1115,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

@@ -74,7 +74,7 @@ layout: default
       <a href="/">← 返回首页</a>
     </p>
 
-    {% if jekyll.environment == "production" and site.github.client_id %}
+    {% if jekyll.environment == "production" and site.github.client_id and site.gitalk_enabled %}
     <hr>
     <div id="gitalk-container" style="margin-top: 2rem;"></div>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css">

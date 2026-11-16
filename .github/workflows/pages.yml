@@ -39,7 +39,7 @@ jobs:
           JEKYLL_ENV: production
           JEKYLL_GITALK: "true"
           PAGES_REPO_NWO: "godsay1983/godsay1983.github.io"
-        run: bundle exec jekyll build --baseurl "" --destination ./_site
+        run: bundle exec jekyll build --config _config.yml,_config_github.yml --baseurl "" --destination ./_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

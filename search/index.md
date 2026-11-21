@@ -40,6 +40,21 @@ permalink: /search/
 // 文章数据（由 scripts/generate-search-index.js 生成，Jekyll 构建时自动更新）
 var searchData = [
   {
+    "title": "37岁哈登砍51分超越科比：37年岁月也压不住的火箭登",
+    "url": "/posts/2026/11/22/harden-51-points-passes-kobe-cavaliers/",
+    "date": "2026-11-22",
+    "categories": "NBA",
+    "tags": [
+      "NBA",
+      "詹姆斯·哈登",
+      "骑士",
+      "步行者",
+      "NBA杯",
+      "2026-27"
+    ],
+    "excerpt": "二、逐节复盘：一场教科书式的\"火箭登\" | 节次 | 哈希登 | 骑士 | 步行者 | 累计比分 |"
+  },
+  {
     "title": "杨瀚森的三分钟真空：2米13的状元秀，为何在开拓者连垃圾时间都排不上",
     "url": "/posts/2026/11/16/yang-hansen-portland-rotation-analysis/",
     "date": "2026-11-16",
@@ -1115,7 +1130,7 @@ var searchData = [
     "tags": [],
     "excerpt": ""
   }
-];;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+];;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 var fuse = new Fuse(searchData, {
   keys: ['title', 'categories', 'tags', 'excerpt'],

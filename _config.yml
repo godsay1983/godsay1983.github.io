@@ -30,13 +30,6 @@ collections:
   posts:
     permalink: /posts/:year/:month/:day/:title/
 
-# GitHub（用于 Gitalk 评论，需在 GitHub OAuth App 注册后填入）
-github:
-  client_id: "REMOVED_CLIENT_ID"
-  client_secret: "REMOVED_CLIENT_SECRET"
-  repository: "godsay1983/godsay1983.github.io"
+# Gitalk 评论已移除（原 OAuth client_secret 曾以明文提交到公开仓库，已从代码删除）
+# 如需重新启用评论，请改用服务端代理方案，勿将 client_secret 提交到仓库。
 
-# Gitalk 评论开关
-# 默认关闭（内网 GitLab 部署不需要评论）。
-# GitHub Pages 部署时由 CI 用 --config 叠加 _config_github.yml 开启。
-gitalk_enabled: false

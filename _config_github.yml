@@ -1,3 +1,0 @@
-# GitHub Pages 专用配置（由 .github/workflows/pages.yml 通过 --config 叠加）
-# 开启 Gitalk 评论功能。内网 GitLab 部署不加载此文件，保持 gitalk_enabled: false。
-gitalk_enabled: true
